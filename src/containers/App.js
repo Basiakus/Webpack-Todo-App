@@ -7,7 +7,20 @@ class App extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            data: []
+            data: [
+                {
+                    text: "Rubish",
+                    id: 1
+                },
+                {
+                    text: "Huvering",
+                    id: 2
+                },
+                {
+                    text: "Learning",
+                    id:3
+                }
+            ]
         };
     }
     addTodo(val){
@@ -23,9 +36,11 @@ class App extends React.Component {
         this.setState({data: remainder});
     }
     render() {
+        const thingsToDo = this.state.data.map(oneThing => <li key={oneThing.id}>{oneThing.text}</li>)
         return (
             <div className={style.TodoApp}>
                 <Title title='Tytuł aplikacji' />
+                <ul>{thingsToDo}</ul>
                 Tutaj pojawią się komponenty naszej aplikacji.
             </div>
         );
