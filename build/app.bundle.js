@@ -7727,10 +7727,6 @@ var _App = __webpack_require__(28);
 
 var _App2 = _interopRequireDefault(_App);
 
-var _Title = __webpack_require__(33);
-
-var _Title2 = _interopRequireDefault(_Title);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
@@ -7779,7 +7775,6 @@ var App = function (_React$Component) {
             return _react2.default.createElement(
                 'div',
                 { className: _App2.default.TodoApp },
-                _react2.default.createElement(_Title2.default, { title: 'Tytu\u0142 Aplikacji' }),
                 'Tutaj pojawi\u0105 si\u0119 komponenty naszej aplikacji.'
             );
         }
@@ -8385,36 +8380,6 @@ module.exports = function (css) {
 	// send back the fixed css
 	return fixedCss;
 };
-
-/***/ }),
-/* 33 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _react = __webpack_require__(2);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-propTypes = {
-	title: _react2.default.PropTypes.string
-};
-var Title = function Title(props) {
-	return _react2.default.createElement(
-		'h1',
-		null,
-		props.title
-	);
-};
-
-exports.default = Title;
 
 /***/ })
 /******/ ]);
