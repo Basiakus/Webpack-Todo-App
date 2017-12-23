@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './App.css';
 import Title from '../components/Title.js';
-
+import TodoList from  '../components/TodoList';
 
 class App extends React.Component {
     constructor(props){
@@ -36,15 +36,14 @@ class App extends React.Component {
         this.setState({data: remainder});
     }
     render() {
-        const thingsToDo = this.state.data.map(oneThing => <li key={oneThing.id}>{oneThing.text}</li>)
+        //const thingsToDo = this.state.data.map(oneThing => <li key={oneThing.id}>{oneThing.text}</li>) /  /   <ul>{thingsToDo}</ul>
         return (
             <div className={style.TodoApp}>
                 <Title title='Tytuł aplikacji' />
-                <ul>{thingsToDo}</ul>
-                Tutaj pojawią się komponenty naszej aplikacji.
+                    Tutaj pojawią się komponenty naszej aplikacji.
+                 <TodoList list={this.state.data} action={this.removeTodo.bind(this)}/>
             </div>
         );
     }
 }
-
 export default App;
