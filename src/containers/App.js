@@ -41,7 +41,7 @@ class App extends React.Component {
             <div className={style.TodoApp}>
                 <Title title='Tytuł aplikacji' />
                     Tutaj pojawią się komponenty naszej aplikacji.
-                 <TodoList list={this.state.data} action={this.removeTodo.bind(this)}/>
+                <TodoList list={this.state.data} action={this.removeTodo.bind(this)}/>
             </div>
         );
     }

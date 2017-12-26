@@ -1,6 +1,6 @@
 .TodoApp {
-    background-color: #F5F5F5;
-    color: #222;
+    background-color: gray;
+    color: white;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -10,3 +10,4 @@
     width: 100vw;
     height: 100vh;
 }
+

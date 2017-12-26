@@ -4,6 +4,8 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 var OptimizeJsPlugin = require('optimize-js-plugin');
 
+
+
 //webpack.config.js
 module.exports = {
     entry: './src/index.js',
@@ -42,5 +44,7 @@ module.exports = {
                 ]               
             }
         ]
-    }   
+    }
 };
+var env = process.env.NODE_ENV;
+console.log('NODE_ENV:', env);
