@@ -1,8 +1,8 @@
 const path = require('path');
-var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-var OptimizeJsPlugin = require('optimize-js-plugin');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const OptimizeJsPlugin = require('optimize-js-plugin');
 
 
 
@@ -46,5 +46,5 @@ module.exports = {
         ]
     }
 };
-var env = process.env.NODE_ENV;
+const env = process.env.NODE_ENV;
 console.log('NODE_ENV:', env);
