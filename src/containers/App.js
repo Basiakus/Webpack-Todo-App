@@ -3,6 +3,7 @@ import style from './App.css';
 import Title from '../components/Title.js';
 import TodoForm from  '../components/TodoForm.js';
 import TodoList from '../components/TodoList.js';
+import uuid from 'uuid';
 
 class App extends React.Component {
     constructor(props){
@@ -24,15 +25,20 @@ class App extends React.Component {
             ]
         };
     }
-    addTodo(event){
-        
+    addTodo(event) {
         const todo = {
-            text: event,
+            text: this.state.text,
             id: uuid.v4(),
         };
         const data = [...this.state.data, todo];
         this.setState({data});
         event.preventDefault();
+        debugger
+    }
+    onChangeHandle(event) {
+        this.setState({
+            text: event.target.value
+        })
     }
     removeTodo(id) {
         const remainder = this.state.data.filter(todo => todo.id !== id);
@@ -43,7 +49,7 @@ class App extends React.Component {
         return (
             <div className={style.TodoApp}>
                 <Title title='Misje do zrobienia' />
-                <TodoForm action={this.addTodo.bind(this)} text={event.target.value} />
+                <TodoForm action={this.addTodo.bind(this)} text={this.state.text} onChangeHandle={this.onChangeHandle.bind(this)} />
                 <TodoList list={this.state.data} action={this.removeTodo.bind(this)}/>
             </div>
         );
