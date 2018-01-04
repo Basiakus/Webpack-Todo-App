@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeJsPlugin = require('optimize-js-plugin');
+const env = process.env.NODE_ENV || 'development';
 
 
 
@@ -20,6 +21,7 @@ module.exports = {
             filename: 'index.html',
             inject: 'body'
         }),
+        
         new webpack.optimize.UglifyJsPlugin(),
         new OptimizeJsPlugin({
           sourceMap: false
@@ -47,6 +49,3 @@ module.exports = {
         ]
     }
 };
-
-const env = process.env.NODE_ENV;
-console.log('NODE_ENV:', env);
