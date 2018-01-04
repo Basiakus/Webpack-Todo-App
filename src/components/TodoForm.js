@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 
 const TodoForm = props => 
 	<form onSubmit={e => props.action(e)}>
-		<input type="text" onChange={props.onChangeHandle}></input>
-		<input type="submit" value="Submit"/>
+		Nowa misja: <input type="text" onChange={props.onChangeHandle}></input>
+		<input type="submit" value="NACIŚNIJ"/>, aby dodać
 	</form>
 
 TodoForm.propsTypes = {

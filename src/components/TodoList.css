@@ -10,3 +10,6 @@
 .List li:hover {
 	cursor: alias;
 }
+.List form input {
+	display: inline;
+}
