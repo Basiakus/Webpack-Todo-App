@@ -1,4 +1,9 @@
 .List {
     color: red;
     list-style-type: upper-roman;
+    font-weight: bold;
+    font-size: 28px;
+    font-family: cursive;
+    margin-top: 10px;
+    text-align: right; 
 }
