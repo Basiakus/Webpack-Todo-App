@@ -6,6 +6,7 @@ const OptimizeJsPlugin = require('optimize-js-plugin');
 
 
 
+
 //webpack.config.js
 module.exports = {
     entry: './src/index.js',
@@ -46,5 +47,6 @@ module.exports = {
         ]
     }
 };
+
 const env = process.env.NODE_ENV;
 console.log('NODE_ENV:', env);
