@@ -8,6 +8,7 @@ console.log('NODE_ENV:', env);
 const plugins = [];
 
 if(env === 'production') {
+    console.log('loading plugins for production');
     plugins.push(
         new webpack.optimize.UglifyJsPlugin(),
         new OptimizeJsPlugin({sourceMap: false})
