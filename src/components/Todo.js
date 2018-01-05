@@ -1,9 +1,10 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+
+const Todo = props => <li>{props.object}<li/>
+Todo.propsTypes = {
+ 	object: PropTypes.object.isRequired
+}
 
 export default Todo;
-
-const Todo = props => <li />
-TodoList.propsTypes = {
- 	list: PropTypes.object.isRequired,
- 	action: PropTypes.func.isRequired,
- 	text: PropTypes.string.isRequired
-}
