@@ -5,7 +5,14 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeJsPlugin = require('optimize-js-plugin');
 const env = process.env.NODE_ENV || 'development';
 console.log('NODE_ENV:', env);
+const plugins = [];
 
+if(env === 'production') {
+    plugins.push(
+        new webpack.optimize.UglifyJsPlugin(),
+        new OptimizeJsPlugin({sourceMap: false})
+    );
+}
 
 //webpack.config.js
 module.exports = {
@@ -22,10 +29,6 @@ module.exports = {
             template: 'src/index.html',
             filename: 'index.html',
             inject: 'body'
-        }),
-        new webpack.optimize.UglifyJsPlugin(),
-        new OptimizeJsPlugin({
-          sourceMap: false
         })
     ],
 
