@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-const Todo = props => <li>{props.object}<li/>
-Todo.propsTypes = {
- 	object: PropTypes.object.isRequired
+const Todo = props => <li onClick={props.del}>{props.text}</li>
+Todo.propTypes = {
+ 	text: PropTypes.object.isRequired,
+ 	del: PropTypes.func.isRequired
 }
 
 export default Todo;
