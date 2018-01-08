@@ -33,7 +33,6 @@ class App extends React.Component {
         const data = [...this.state.data, todo];
         this.setState({data});
         event.preventDefault();
-        debugger
     }
     onChangeHandle(event) {
         this.setState({
@@ -50,7 +49,7 @@ class App extends React.Component {
             <div className={style.TodoApp}>
                 <Title title='Misje do zrobienia' />
                 <TodoForm action={this.addTodo.bind(this)} text={this.state.text} onChangeHandle={this.onChangeHandle.bind(this)} />
-                <TodoList list={this.state.data} action={this.removeTodo.bind(this)}/>
+                <TodoList allMissions={this.state.data} action={this.removeTodo.bind(this)}/>
             </div>
         );
     }

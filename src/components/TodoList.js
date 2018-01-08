@@ -5,10 +5,10 @@ import style from './TodoList.css';
 import Todo from '../components/Todo.js';
 const TodoList = props => 
 	<ul className={style.List}>
-		{props.list.map(oneThing => <Todo key={oneThing.id} del={() => props.action(oneThing.id)} text={oneThing.text} />)} 
+		{props.allMissions.map(oneThing => <Todo key={oneThing.id} del={() => props.action(oneThing.id)} mission={oneThing.text} />)} 
 	</ul>
 TodoList.propTypes = {
- 	list: PropTypes.object.isRequired,
+ 	allMissions: PropTypes.array.isRequired,
  	action: PropTypes.func.isRequired
 }
 export default TodoList;
